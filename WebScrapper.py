@@ -1,6 +1,12 @@
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
+from datetime import date
+
+curr_date = date.today()
+day = curr_date.day
+month = curr_date.month
+year = curr_date.year
 
 cricket_formats = ['t20i', 'odi', 'test']
 player_types = ['batting', 'bowling', 'all-rounder']
@@ -35,4 +41,4 @@ for cricket_format in cricket_formats:
             length = len(df)
             df.loc[length] = table_row
 
-        df.to_csv(f'./csv/{cricket_format}_{player_type}.csv', index=False)
+        df.to_csv(f'./csv/{cricket_format}_{player_type}_{day}-{month}-{year}.csv', index=False)

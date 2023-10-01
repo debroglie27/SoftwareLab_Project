@@ -1,5 +1,6 @@
-import pandas as pd
+import os
 import requests
+import pandas as pd
 from bs4 import BeautifulSoup
 from datetime import date
 
@@ -40,5 +41,8 @@ for cricket_format in cricket_formats:
 
             length = len(df)
             df.loc[length] = table_row
+
+        if not os.path.exists("./csv"):
+            os.makedirs("./csv")
 
         df.to_csv(f'./csv/{cricket_format}_{player_type}_{day}-{month}-{year}.csv', index=False)

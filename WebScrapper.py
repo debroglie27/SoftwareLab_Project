@@ -8,6 +8,9 @@ from config import cricket_formats, player_types
 def web_scrapper(day, month, year):
     basic_url = 'https://www.icc-cricket.com/rankings/mens/player-rankings/'
 
+    if not os.path.exists("./csv"):
+        os.makedirs("./csv")
+
     for cricket_format in cricket_formats:
         for player_type in player_types:
             url = basic_url + cricket_format + '/' + player_type
@@ -35,8 +38,5 @@ def web_scrapper(day, month, year):
 
                 length = len(df)
                 df.loc[length] = table_row
-
-            if not os.path.exists("./csv"):
-                os.makedirs("./csv")
 
             df.to_csv(f'./csv/{cricket_format}_{player_type}_{day}-{month}-{year}.csv', index=False)

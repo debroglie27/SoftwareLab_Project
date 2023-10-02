@@ -1,9 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-
-
-cricket_formats = ['t20i', 'odi', 'test']
-player_types = ['batting', 'bowling', 'all-rounder']
+from config import cricket_formats, player_types
 
 
 def data_plotter(day, month, year):

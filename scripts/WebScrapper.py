@@ -2,14 +2,17 @@ import os
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
-from config import cricket_formats, player_types
+from scripts.config import cricket_formats, player_types
 
 
 def web_scrapper(day, month, year):
     basic_url = 'https://www.icc-cricket.com/rankings/mens/player-rankings/'
 
-    if not os.path.exists("./csv"):
-        os.makedirs("./csv")
+    project_directory = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    folder_path = os.path.join(project_directory, 'csv')
+
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
 
     for cricket_format in cricket_formats:
         for player_type in player_types:

@@ -1,5 +1,5 @@
 def save_latex_variable(tex_dict):
-    filename = 'texData.dat'
+    filename = 'scripts/texData.dat'
     with open(filename, "w") as file:
         for key, value in tex_dict.items():
             file.write(f"{key},{value}\n")

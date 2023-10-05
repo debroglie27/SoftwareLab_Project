@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}T20i Format}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Batting}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Bowling}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}All-Rounder}{4}{subsection.1.3}%
+\contentsline {section}{\numberline {2}ODI Format}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Batting}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Bowling}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}All-Rounder}{7}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Test Format}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Batting}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Bowling}{9}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}All-Rounder}{10}{subsection.3.3}%

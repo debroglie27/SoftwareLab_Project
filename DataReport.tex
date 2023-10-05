@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{datatool, filecontents}
+\DTLsetseparator{,}
+
+\DTLloaddb[noheader, keys={thekey,thevalue}]{texData}{texData.dat}
+\newcommand{\var}[1]{\DTLfetch{texData}{thekey}{#1}{thevalue}}
+
+\graphicspath{ {./plots/} }
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+\begin{document}
+
+    \begin{center}
+
+        % MAKE SURE YOU TAKE OUT THE SQUARE BRACKETS
+
+        \LARGE{\textbf{ICC Men's Ranking}} \\
+        \vspace{1em}
+        \Large{An Auto-generated Report on ICC Men's Ranking} \\
+        \vspace{1em}
+        \normalsize{Dated: \var{day}-\var{month}-\var{year}}
+        \vspace{1em}
+
+    \end{center}
+
+    \vspace{4em}
+    \tableofcontents
+
+    \newpage
+
+    \begin{normalsize}
+
+        \section{T20i Format}\label{sec:t20i-format}
+            \subsection{Batting}\label{subsec:batting1}
+                \includegraphics[scale=0.75]{t20i_batting_3-10-2023-1}
+                \includegraphics[scale=0.75]{t20i_batting_3-10-2023-2}
+            \subsection{Bowling}\label{subsec:bowling1}
+                \includegraphics[scale=0.75]{t20i_bowling_3-10-2023-1}
+                \includegraphics[scale=0.75]{t20i_bowling_3-10-2023-2}
+            \subsection{All-Rounder}\label{subsec:all-rounder1}
+                \includegraphics[scale=0.75]{t20i_all-rounder_3-10-2023-1}
+                \includegraphics[scale=0.75]{t20i_all-rounder_3-10-2023-2}
+
+        \vspace{2em}
+
+        \section{ODI Format}\label{sec:odi-format}
+            \subsection{Batting}\label{subsec:batting2}
+                \includegraphics[scale=0.75]{odi_batting_3-10-2023-1}
+                \includegraphics[scale=0.75]{odi_batting_3-10-2023-2}
+            \subsection{Bowling}\label{subsec:bowling2}
+                \includegraphics[scale=0.75]{odi_bowling_3-10-2023-1}
+                \includegraphics[scale=0.75]{odi_bowling_3-10-2023-2}
+            \subsection{All-Rounder}\label{subsec:all-rounder2}
+                \includegraphics[scale=0.75]{odi_all-rounder_3-10-2023-1}
+                \includegraphics[scale=0.75]{odi_all-rounder_3-10-2023-2}
+
+        \vspace{2em}
+
+        \section{Test Format}\label{sec:test-format}
+            \subsection{Batting}\label{subsec:batting3}
+                \includegraphics[scale=0.75]{test_batting_3-10-2023-1}
+                \includegraphics[scale=0.75]{test_batting_3-10-2023-2}
+            \subsection{Bowling}\label{subsec:bowling3}
+                \includegraphics[scale=0.75]{test_bowling_3-10-2023-1}
+                \includegraphics[scale=0.75]{test_bowling_3-10-2023-2}
+            \subsection{All-Rounder}\label{subsec:all-rounder3}
+                \includegraphics[scale=0.75]{test_all-rounder_3-10-2023-1}
+                \includegraphics[scale=0.75]{test_all-rounder_3-10-2023-2}
+        .
+\end{normalsize}
+
+\end{document}

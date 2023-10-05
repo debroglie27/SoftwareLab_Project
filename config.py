@@ -1,9 +1,9 @@
-from datetime import date
+def save_latex_variable(tex_dict):
+    filename = 'texData.dat'
+    with open(filename, "w") as file:
+        for key, value in tex_dict.items():
+            file.write(f"{key},{value}\n")
 
-curr_date = date.today()
-day = curr_date.day
-month = curr_date.month
-year = curr_date.year
 
 cricket_formats = ['t20i', 'odi', 'test']
 player_types = ['batting', 'bowling', 'all-rounder']

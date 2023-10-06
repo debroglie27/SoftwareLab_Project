@@ -1,16 +1,12 @@
 import os
-from datetime import date
-from scripts.config import save_latex_variable
+from scripts.config import save_latex_variable, day, month, year
 from scripts.WebScrapper import web_scrapper
 from scripts.DataPlotter import data_plotter
 
 
-day = date.today().day
-month = date.today().month
-year = date.today().year
-
+# Defining key value pairs that will be saved
 dict_var = {'day': day, 'month': month, 'year': year}
-# Saving variables for Latex
+# Saving key value pairs for Latex
 save_latex_variable(dict_var)
 
 # Generate CSV Files

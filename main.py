@@ -1,7 +1,7 @@
-import os
-from scripts.config import save_latex_variable, day, month, year
 from scripts.WebScrapper import web_scrapper
 from scripts.DataPlotter import data_plotter
+from scripts.LatexCompiler import latex_compiler
+from scripts.config import save_latex_variable, day, month, year
 
 
 # Defining key value pairs that will be saved
@@ -15,11 +15,5 @@ web_scrapper(day, month, year)
 # Generate Plots
 data_plotter(day, month, year)
 
-# Creating Output Folder if not present
-if not os.path.exists('output'):
-    os.makedirs('output')
-
-os.chdir('output')
-# Generate Report
-os.system("pdflatex ../DataReport.tex")
-os.system("pdflatex ../DataReport.tex")
+# Compiling the Latex File
+latex_compiler()

@@ -10,7 +10,7 @@ dict_var = {'day': day, 'month': month, 'year': year}
 
 if __name__ == "__main__":
     # Saving key value pairs for Latex
-    save_latex_variable(dict_var)
+    save_latex_variable(dict_var, mode="w")
 
     # Generate CSV Files
     web_scrapper(day, month, year)

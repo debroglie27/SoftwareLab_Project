@@ -2,7 +2,7 @@ import os
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
-from scripts.config import cricket_formats, player_types
+from scripts.config import cricket_formats, player_types, save_latex_variable
 
 
 def web_scrapper(day, month, year):
@@ -13,6 +13,8 @@ def web_scrapper(day, month, year):
 
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
+
+    pos1_player_names = {}
 
     for cricket_format in cricket_formats:
         for player_type in player_types:
@@ -25,6 +27,19 @@ def web_scrapper(day, month, year):
 
             all_data = table.find_all('tr')
             row_1st = all_data[1].find_all('td')
+
+            # Position 1 Player Details
+            pos1_player_name = row_1st[1].div.find_all('div')[1].a.div.text.strip()
+            pos1_player_team = row_1st[2].div.text.strip()
+            pos1_player_rating = row_1st[3].div.text.strip()
+            pos1_player_best_rating = row_1st[4].div.span.text.split('v')[0].strip()
+
+            # Storing Position 1 Player Details in a Dictionary
+            pos1_player_names[f'{cricket_format}-{player_type}-name'] = pos1_player_name
+            pos1_player_names[f'{cricket_format}-{player_type}-team'] = pos1_player_team
+            pos1_player_names[f'{cricket_format}-{player_type}-rating'] = pos1_player_rating
+            pos1_player_names[f'{cricket_format}-{player_type}-bestrating'] = pos1_player_best_rating
+
             table_row_1st = ['1', row_1st[1].div.find_all('div')[1].a.div.text.strip(),
                              row_1st[2].div.text.strip(), row_1st[3].div.text.strip(),
                              row_1st[4].div.span.text.split('v')[0].strip()]
@@ -43,3 +58,5 @@ def web_scrapper(day, month, year):
                 df.loc[length] = table_row
 
             df.to_csv(f'./csv/{cricket_format}_{player_type}_{day}-{month}-{year}.csv', index=False)
+
+    save_latex_variable(pos1_player_names, mode="a")

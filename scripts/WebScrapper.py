@@ -38,7 +38,7 @@ def web_scrapper(day, month, year):
             pos1_player_names[f'{cricket_format}-{player_type}-name'] = pos1_player_name
             pos1_player_names[f'{cricket_format}-{player_type}-team'] = pos1_player_team
             pos1_player_names[f'{cricket_format}-{player_type}-rating'] = pos1_player_rating
-            pos1_player_names[f'{cricket_format}-{player_type}-bestrating'] = pos1_player_best_rating
+            pos1_player_names[f'{cricket_format}-{player_type}-best-rating'] = pos1_player_best_rating
 
             table_row_1st = ['1', row_1st[1].div.find_all('div')[1].a.div.text.strip(),
                              row_1st[2].div.text.strip(), row_1st[3].div.text.strip(),

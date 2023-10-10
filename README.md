@@ -1,6 +1,7 @@
 # Autogenerate Report On ICC Men's Ranking
 
-This is a Software Lab (CS699) Project where we generate a report on ICC Men's Ranking and that too automatic.
+This is a Software Lab (CS699) Project where we generate a report on ICC Men's Ranking and that too automatic.  
+ICC - International Cricket Council.
 
 ## Packages Used
 
@@ -19,6 +20,18 @@ The entire project is divided into 3 steps:
 
 
 ### Web Scraping
+
+The data is collected from ICC's official website (9 Webpages):
+- [T20i Batting Ranking Data](https://www.icc-cricket.com/rankings/mens/player-rankings/t20i/batting)
+- [T20i Bowling Ranking Data](https://www.icc-cricket.com/rankings/mens/player-rankings/t20i/bowling)
+- [T20i All-Rounder Ranking Data](https://www.icc-cricket.com/rankings/mens/player-rankings/t20i/all-rounder)
+- [ODI Batting Ranking Data](https://www.icc-cricket.com/rankings/mens/player-rankings/odi/batting)
+- [ODI Bowling Ranking Data](https://www.icc-cricket.com/rankings/mens/player-rankings/odi/bowling)
+- [ODI All-Rounder Ranking Data](https://www.icc-cricket.com/rankings/mens/player-rankings/odi/all-rounder)
+- [Test Batting Ranking Data](https://www.icc-cricket.com/rankings/mens/player-rankings/test/batting)
+- [Test Bowling Ranking Data](https://www.icc-cricket.com/rankings/mens/player-rankings/test/bowling)
+- [Test All-Rounder Ranking Data](https://www.icc-cricket.com/rankings/mens/player-rankings/test/all-rounder)
+
 
 ### Data Plotting
 

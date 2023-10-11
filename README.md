@@ -32,6 +32,18 @@ The data is collected from ICC's official website (9 Webpages):
 - [Test Bowling Ranking Data](https://www.icc-cricket.com/rankings/mens/player-rankings/test/bowling)
 - [Test All-Rounder Ranking Data](https://www.icc-cricket.com/rankings/mens/player-rankings/test/all-rounder)
 
+The Data collected is stored inside a csv folder and data from each webpage is in separate csv files.
+- t20i_batting_DD-MM-YYYY.csv
+- t20i_bowling_DD-MM-YYYY.csv
+- t20i_all-rounder_DD-MM-YYYY.csv
+- odi_batting_DD-MM-YYYY.csv
+- odi_bowling_DD-MM-YYYY.csv
+- odi_all-rounder_DD-MM-YYYY.csv
+- test_batting_DD-MM-YYYY.csv
+- test_bowling_DD-MM-YYYY.csv
+- test_all-rounder_DD-MM-YYYY.csv
+
+`Note: Day, Month and Year are also specified to represent the date of web scraping.`
 
 ### Data Plotting
 

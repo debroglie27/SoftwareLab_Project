@@ -46,6 +46,8 @@ The Data collected is stored inside a csv folder and data from each webpage is i
 `Note: Day, Month and Year are also specified to represent the date of web scraping.`
 
 ### Data Plotting
+Using the csv files bar plots is created. From each csv file 2 plots are created.  
+In total 18 plots.
 
 ### PDF Report Generation
 

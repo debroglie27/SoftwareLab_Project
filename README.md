@@ -46,8 +46,10 @@ The Data collected is stored inside a csv folder and data from each webpage is i
 `Note: Day, Month and Year are also specified to represent the date of web scraping.`
 
 ### Data Plotting
-Using the csv files bar plots is created. From each csv file 2 plots are created.  
-In total 18 plots.
+Using the csv files bar plots are created. From each csv file 2 plots are created.
+
+* First Plot: Number of Players for each Cricket Team
+* Second Plot: Average Rating of Players for each Cricket Team
 
 ### PDF Report Generation
 

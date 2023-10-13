@@ -1,7 +1,7 @@
 # Autogenerate Report On ICC Men's Ranking
 
 This is a Software Lab (CS699) Project where we generate a report on ICC Men's Ranking and that too automatic.  
-ICC - International Cricket Council.
+`ICC - International Cricket Council`
 
 ## Packages Used
 
@@ -44,6 +44,15 @@ The Data collected is stored inside a csv folder and data from each webpage is i
 - test_all-rounder_DD-MM-YYYY.csv
 
 `Note: Day, Month and Year are also specified to represent the date of web scraping.`
+
+### About The Data
+
+Columns:
+* Pos: Rank of Player
+* Player: Name of Player
+* Team: Team the Player belongs to
+* Rating: Rating of Player (out of 1000)
+* Career Best Rating: Career Best Rating of Player (out of 1000)
 
 ### Data Plotting
 Using the csv files bar plots are created. From each csv file 2 plots are created.

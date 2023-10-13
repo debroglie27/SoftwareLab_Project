@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
-from scripts.config import cricket_formats, player_types
+from scripts.globals import cricket_formats, player_types
 
 
 def data_plotter(day, month, year):

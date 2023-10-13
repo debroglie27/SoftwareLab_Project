@@ -2,7 +2,7 @@ import os
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
-from scripts.config import cricket_formats, player_types, save_latex_variable
+from scripts.globals import cricket_formats, player_types, save_latex_variable
 
 
 def web_scrapper(day, month, year):

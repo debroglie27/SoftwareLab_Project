@@ -1,7 +1,7 @@
 from scripts.WebScrapper import web_scrapper
 from scripts.DataPlotter import data_plotter
 from scripts.LatexCompiler import latex_compiler
-from scripts.config import save_latex_variable, day, month, year
+from scripts.globals import save_latex_variable, day, month, year
 
 
 # Defining key value pairs that will be saved

@@ -6,6 +6,7 @@
 \usepackage{datatool, filecontents}
 \DTLsetseparator{,}
 
+% Loading Data from texData.dat file
 \DTLloaddb[noheader, keys={thekey,thevalue}]{texData}{../scripts/texData.dat}
 \newcommand{\var}[1]{\DTLfetch{texData}{thekey}{#1}{thevalue}}
 

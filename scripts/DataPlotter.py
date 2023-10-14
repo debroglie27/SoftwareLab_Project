@@ -8,6 +8,7 @@ def data_plotter(day, month, year):
     project_directory = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     folder_path = os.path.join(project_directory, 'plots')
 
+    # Creating plots folder if folder does not exist
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
 
@@ -15,7 +16,7 @@ def data_plotter(day, month, year):
         for player_type in player_types:
             df = pd.read_csv(f'./csv/{cricket_format}_{player_type}_{day}-{month}-{year}.csv')
 
-            # Plot 1
+            # Plot 1 - No. of Players for each Cricket Team
             counts = df['Team'].value_counts()
             plt.figure(figsize=(10, 5))
             plt.title('No. of Players for each Cricket Team')
@@ -24,7 +25,7 @@ def data_plotter(day, month, year):
             plt.bar(counts.index, counts.values)
             plt.savefig(f'./plots/{cricket_format}_{player_type}-1.png')
 
-            # Plot 2
+            # Plot 2 - Average Rating of Players for each Cricket Team
             mean_score = df.groupby('Team')['Rating'].mean()
             plt.figure(figsize=(10, 5))
             plt.title('Average Rating of Players for each Cricket Team')

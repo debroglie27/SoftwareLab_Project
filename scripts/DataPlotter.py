@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from scripts.globals import cricket_formats, player_types
 
 
-def data_plotter(day, month, year):
+def data_plotter(dd, mm, yyyy):
     project_directory = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     folder_path = os.path.join(project_directory, 'plots')
 
@@ -14,7 +14,7 @@ def data_plotter(day, month, year):
 
     for cricket_format in cricket_formats:
         for player_type in player_types:
-            df = pd.read_csv(f'./csv/{cricket_format}_{player_type}_{day}-{month}-{year}.csv')
+            df = pd.read_csv(f'./csv/{cricket_format}_{player_type}_{dd}-{mm}-{yyyy}.csv')
 
             # Plot 1 - No. of Players for each Cricket Team
             counts = df['Team'].value_counts()
@@ -33,3 +33,8 @@ def data_plotter(day, month, year):
             plt.ylabel('Average Rating')
             plt.bar(mean_score.index, mean_score.values)
             plt.savefig(f'./plots/{cricket_format}_{player_type}-2.png')
+
+
+if __name__ == "__main__":
+    from scripts.globals import day, month, year
+    data_plotter(day, month, year)

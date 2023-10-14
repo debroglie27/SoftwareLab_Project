@@ -10,3 +10,7 @@ def latex_compiler():
     # Generate Report
     os.system("pdflatex ../scripts/DataReport.tex")
     os.system("pdflatex ../scripts/DataReport.tex")
+
+
+if __name__ == "__main__":
+    latex_compiler()

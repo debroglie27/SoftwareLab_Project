@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 from scripts.globals import cricket_formats, player_types, save_latex_variable
 
 
-def web_scrapper(day, month, year):
+def web_scrapper(dd, mm, yyyy):
     basic_url = 'https://www.icc-cricket.com/rankings/mens/player-rankings/'
 
     project_directory = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -57,6 +57,11 @@ def web_scrapper(day, month, year):
                 length = len(df)
                 df.loc[length] = table_row
 
-            df.to_csv(f'./csv/{cricket_format}_{player_type}_{day}-{month}-{year}.csv', index=False)
+            df.to_csv(f'./csv/{cricket_format}_{player_type}_{dd}-{mm}-{yyyy}.csv', index=False)
 
     save_latex_variable(pos1_player_names, mode="a")
+
+
+if __name__ == "__main__":
+    from scripts.globals import day, month, year
+    web_scrapper(day, month, year)

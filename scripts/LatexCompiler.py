@@ -9,7 +9,7 @@ def latex_compiler():
     # Changing directory to where output files of latex compilation will be generated
     os.chdir('output')
 
-    # Generating Report - Doing twice to generate Contents table properly
+    # Compiling Latex file - Doing twice to generate Contents table properly
     os.system("pdflatex ../scripts/DataReport.tex > NUL 2>&1")
     os.system("pdflatex ../scripts/DataReport.tex > NUL 2>&1")
 

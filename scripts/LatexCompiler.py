@@ -2,12 +2,14 @@ import os
 
 
 def latex_compiler():
-    # Creating Output Folder if not present
+    # Creating output Folder if not present
     if not os.path.exists('output'):
         os.makedirs('output')
 
+    # Changing directory to where output files of latex compilation will be generated
     os.chdir('output')
-    # Generate Report
+
+    # Generating Report - Doing twice to generate Contents table properly
     os.system("pdflatex ../scripts/DataReport.tex > NUL 2>&1")
     os.system("pdflatex ../scripts/DataReport.tex > NUL 2>&1")
 

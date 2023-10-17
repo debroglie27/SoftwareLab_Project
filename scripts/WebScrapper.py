@@ -6,11 +6,12 @@ from scripts.globals import cricket_formats, player_types, save_latex_variable
 
 
 def web_scrapper(dd, mm, yyyy):
-    basic_url = 'https://www.icc-cricket.com/rankings/mens/player-rankings/'
+    base_url = 'https://www.icc-cricket.com/rankings/mens/player-rankings/'
 
     project_directory = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     folder_path = os.path.join(project_directory, 'csv')
 
+    # Creating output Folder if not present
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
 
@@ -18,7 +19,7 @@ def web_scrapper(dd, mm, yyyy):
 
     for cricket_format in cricket_formats:
         for player_type in player_types:
-            url = basic_url + cricket_format + '/' + player_type
+            url = base_url + cricket_format + '/' + player_type
             page = requests.get(url)
 
             soup = BeautifulSoup(page.text, 'html.parser')
@@ -44,7 +45,10 @@ def web_scrapper(dd, mm, yyyy):
                              row_1st[2].div.text.strip(), row_1st[3].div.text.strip(),
                              row_1st[4].div.span.text.split('v')[0].strip()]
 
+            # Initialising the dataframe using table titles
             df = pd.DataFrame(columns=table_titles)
+
+            # Adding the 1st row in the dataframe
             length = len(df)
             df.loc[length] = table_row_1st
 
@@ -54,6 +58,7 @@ def web_scrapper(dd, mm, yyyy):
                              data[2].find_all('span')[1].text.strip(), data[3].text.strip(),
                              data[4].text.split('v')[0].strip()]
 
+                # Adding the rows in the dataframe
                 length = len(df)
                 df.loc[length] = table_row
 

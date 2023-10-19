@@ -10,3 +10,7 @@
 \contentsline {subsection}{\numberline {3.1}Batting}{8}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Bowling}{9}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}All-Rounder}{10}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Overall}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}T20i Format}{11}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}ODI Format}{12}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Test Format}{13}{subsection.4.3}%

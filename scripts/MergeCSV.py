@@ -19,10 +19,8 @@ def merge_csv(dd, mm, yyyy):
     all_filenames = list(filter(lambda filename: filter_files(filename, dd, mm, yyyy), all_filenames))
 
     for cricket_format in cricket_formats:
-        print(all_filenames)
         # Filter out csv files with name starting with <cricket-format>
         csv_files = [f for f in all_filenames if f.startswith(f'{cricket_format}')]
-        print(csv_files)
 
         # Create a list to hold the dataframes
         df_list = []

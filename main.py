@@ -2,16 +2,12 @@ from scripts.WebScrapper import web_scrapper
 from scripts.MergeCSV import merge_csv
 from scripts.DataPlotter import data_plotter
 from scripts.LatexCompiler import latex_compiler
-from scripts.globals import save_latex_variable, day, month, year
-
-
-# Defining key value pairs that will be saved
-dict_var = {'day': day, 'month': month, 'year': year}
+from scripts.globals import current_date
 
 
 if __name__ == "__main__":
-    # Saving key value pairs for Latex
-    save_latex_variable(dict_var, mode="w")
+    # Get Current Date
+    day, month, year = current_date()
 
     # Generate CSV Files
     web_scrapper(day, month, year)

@@ -1,15 +1,13 @@
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
-from scripts.globals import cricket_formats, player_types, save_latex_variable, check_folder
+from scripts.globals import cricket_formats, player_types, save_latex_variables, check_folder
 
 
 def web_scrapper(dd, mm, yyyy):
     base_url = 'https://www.icc-cricket.com/rankings/mens/player-rankings/'
 
     check_folder('csv')
-
-    pos1_player_names = {}
 
     for cricket_format in cricket_formats:
         for player_type in player_types:
@@ -30,14 +28,16 @@ def web_scrapper(dd, mm, yyyy):
             pos1_player_best_rating = row_1st[4].div.span.text.split('v')[0].strip()
 
             # Storing Position 1 Player Details in a Dictionary
-            pos1_player_names[f'{cricket_format}-{player_type}-name'] = pos1_player_name
-            pos1_player_names[f'{cricket_format}-{player_type}-team'] = pos1_player_team
-            pos1_player_names[f'{cricket_format}-{player_type}-rating'] = pos1_player_rating
-            pos1_player_names[f'{cricket_format}-{player_type}-best-rating'] = pos1_player_best_rating
+            pos1_player = {f'{cricket_format}-{player_type}-name': pos1_player_name,
+                           f'{cricket_format}-{player_type}-team': pos1_player_team,
+                           f'{cricket_format}-{player_type}-rating': pos1_player_rating,
+                           f'{cricket_format}-{player_type}-best-rating': pos1_player_best_rating}
 
-            table_row_1st = ['1', row_1st[1].div.find_all('div')[1].a.div.text.strip(),
-                             row_1st[2].div.text.strip(), row_1st[3].div.text.strip(),
-                             row_1st[4].div.span.text.split('v')[0].strip()]
+            # Save the Position 1 Player for latex to use
+            save_latex_variables(pos1_player, mode="a")
+
+            table_row_1st = ['1', pos1_player_name, pos1_player_team,
+                             pos1_player_rating, pos1_player_best_rating]
 
             # Initialising the dataframe using table titles
             df = pd.DataFrame(columns=table_titles)
@@ -58,9 +58,9 @@ def web_scrapper(dd, mm, yyyy):
 
             df.to_csv(f'./csv/{cricket_format}_{player_type}_{dd}-{mm}-{yyyy}.csv', index=False)
 
-    save_latex_variable(pos1_player_names, mode="a")
-
 
 if __name__ == "__main__":
-    from scripts.globals import day, month, year
+    from scripts.globals import current_date
+
+    day, month, year = current_date()
     web_scrapper(day, month, year)

@@ -62,5 +62,7 @@ def data_plotter(dd, mm, yyyy):
 
 
 if __name__ == "__main__":
-    from scripts.globals import day, month, year
+    from scripts.globals import current_date
+
+    day, month, year = current_date()
     data_plotter(day, month, year)

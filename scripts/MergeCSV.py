@@ -39,5 +39,7 @@ def merge_csv(dd, mm, yyyy):
 
 
 if __name__ == "__main__":
-    from scripts.globals import day, month, year
+    from scripts.globals import current_date
+
+    day, month, year = current_date()
     merge_csv(day, month, year)

@@ -2,7 +2,7 @@ import os
 from datetime import date
 
 
-def save_latex_variable(tex_dict, mode):
+def save_latex_variables(tex_dict, mode):
     filename = 'scripts/texData.dat'
     with open(filename, mode) as file:
         for key, value in tex_dict.items():
@@ -20,9 +20,17 @@ def check_folder(folder_name):
     return folder_path
 
 
-day = date.today().day
-month = date.today().month
-year = date.today().year
+def current_date():
+    day = date.today().day
+    month = date.today().month
+    year = date.today().year
+
+    # Saving the day, month and year for latex to use
+    date_dict = {'day': day, 'month': month, 'year': year}
+    save_latex_variables(date_dict, mode="w")
+
+    return day, month, year
+
 
 cricket_formats = ['t20i', 'odi', 'test']
 player_types = ['batting', 'bowling', 'all-rounder']

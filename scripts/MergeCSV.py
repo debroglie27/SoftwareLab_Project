@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-from scripts.globals import cricket_formats
+from scripts.globals import cricket_formats, check_folder
 
 
 def filter_files(filename, dd, mm, yyyy):
@@ -12,8 +12,7 @@ def filter_files(filename, dd, mm, yyyy):
 
 
 def merge_csv(dd, mm, yyyy):
-    project_directory = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    folder_path = os.path.join(project_directory, 'csv')
+    folder_path = check_folder('csv')
 
     all_filenames = os.listdir(folder_path)
     all_filenames = list(filter(lambda filename: filter_files(filename, dd, mm, yyyy), all_filenames))

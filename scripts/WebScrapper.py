@@ -1,19 +1,13 @@
-import os
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
-from scripts.globals import cricket_formats, player_types, save_latex_variable
+from scripts.globals import cricket_formats, player_types, save_latex_variable, check_folder
 
 
 def web_scrapper(dd, mm, yyyy):
     base_url = 'https://www.icc-cricket.com/rankings/mens/player-rankings/'
 
-    project_directory = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    folder_path = os.path.join(project_directory, 'csv')
-
-    # Creating output Folder if not present
-    if not os.path.exists(folder_path):
-        os.makedirs(folder_path)
+    check_folder('csv')
 
     pos1_player_names = {}
 

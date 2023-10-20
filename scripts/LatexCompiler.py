@@ -1,10 +1,9 @@
 import os
+from scripts.globals import check_folder
 
 
 def latex_compiler():
-    # Creating output Folder if not present
-    if not os.path.exists('output'):
-        os.makedirs('output')
+    check_folder('output')
 
     # Changing directory to where output files of latex compilation will be generated
     os.chdir('output')

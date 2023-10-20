@@ -1,16 +1,10 @@
-import os
 import pandas as pd
 import matplotlib.pyplot as plt
-from scripts.globals import cricket_formats, player_types
+from scripts.globals import cricket_formats, player_types, check_folder
 
 
 def data_plotter(dd, mm, yyyy):
-    project_directory = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    folder_path = os.path.join(project_directory, 'plots')
-
-    # Creating plots folder if folder does not exist
-    if not os.path.exists(folder_path):
-        os.makedirs(folder_path)
+    check_folder('plots')
 
     for cricket_format in cricket_formats:
         for player_type in player_types:

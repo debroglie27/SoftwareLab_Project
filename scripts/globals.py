@@ -2,6 +2,10 @@ import os
 from datetime import date
 
 
+CRICKET_FORMATS = ['t20i', 'odi', 'test']
+PLAYER_TYPES = ['batting', 'bowling', 'all-rounder']
+
+
 def save_latex_variables(tex_dict, mode):
     filename = 'scripts/texData.dat'
     with open(filename, mode) as file:
@@ -30,7 +34,3 @@ def current_date():
     save_latex_variables(date_dict, mode="w")
 
     return day, month, year
-
-
-cricket_formats = ['t20i', 'odi', 'test']
-player_types = ['batting', 'bowling', 'all-rounder']

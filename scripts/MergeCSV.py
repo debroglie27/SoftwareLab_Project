@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-from scripts.globals import cricket_formats, check_folder
+from scripts.globals import CRICKET_FORMATS, check_folder
 
 
 def filter_files(filename, dd, mm, yyyy):
@@ -17,7 +17,7 @@ def merge_csv(dd, mm, yyyy):
     all_filenames = os.listdir(folder_path)
     all_filenames = list(filter(lambda filename: filter_files(filename, dd, mm, yyyy), all_filenames))
 
-    for cricket_format in cricket_formats:
+    for cricket_format in CRICKET_FORMATS:
         # Filter out csv files with name starting with <cricket-format>
         csv_files = [f for f in all_filenames if f.startswith(f'{cricket_format}')]
 

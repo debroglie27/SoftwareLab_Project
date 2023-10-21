@@ -1,13 +1,13 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from scripts.globals import cricket_formats, player_types, check_folder
+from scripts.globals import CRICKET_FORMATS, PLAYER_TYPES, check_folder
 
 
 def data_plotter(dd, mm, yyyy):
     check_folder('plots')
 
-    for cricket_format in cricket_formats:
-        for player_type in player_types:
+    for cricket_format in CRICKET_FORMATS:
+        for player_type in PLAYER_TYPES:
             # Reading the csv file
             df = pd.read_csv(f'./csv/{cricket_format}_{player_type}_{dd}-{mm}-{yyyy}.csv')
 

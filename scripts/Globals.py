@@ -25,6 +25,7 @@ def check_folder(folder_name):
 
 
 def current_date():
+    print("Fetching Current Date...")
     day = date.today().day
     month = date.today().month
     year = date.today().year
@@ -32,5 +33,7 @@ def current_date():
     # Saving the day, month and year for latex to use
     date_dict = {'day': day, 'month': month, 'year': year}
     save_latex_variables(date_dict, mode="w")
+
+    print("Done")
 
     return day, month, year

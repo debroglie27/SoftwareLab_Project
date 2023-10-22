@@ -1,9 +1,11 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from scripts.globals import CRICKET_FORMATS, PLAYER_TYPES, check_folder
+from scripts.Globals import CRICKET_FORMATS, PLAYER_TYPES, check_folder
 
 
 def data_plotter(dd, mm, yyyy):
+    print("Generating Plots...")
+
     check_folder('plots')
 
     for cricket_format in CRICKET_FORMATS:
@@ -60,9 +62,11 @@ def data_plotter(dd, mm, yyyy):
         plt.savefig(f'./plots/overall_{cricket_format}-2.png')
         plt.close(1)
 
+    print("Done")
+
 
 if __name__ == "__main__":
-    from scripts.globals import current_date
+    from scripts.Globals import current_date
 
     day, month, year = current_date()
     data_plotter(day, month, year)

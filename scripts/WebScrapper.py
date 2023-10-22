@@ -1,10 +1,12 @@
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
-from scripts.globals import CRICKET_FORMATS, PLAYER_TYPES, save_latex_variables, check_folder
+from scripts.Globals import CRICKET_FORMATS, PLAYER_TYPES, save_latex_variables, check_folder
 
 
 def web_scrapper(dd, mm, yyyy):
+    print("Fetching Online Data...")
+
     base_url = 'https://www.icc-cricket.com/rankings/mens/player-rankings/'
 
     check_folder('csv')
@@ -64,9 +66,11 @@ def web_scrapper(dd, mm, yyyy):
             # Saving the dataframe into a csv file
             df.to_csv(f'./csv/{cricket_format}_{player_type}_{dd}-{mm}-{yyyy}.csv', index=False)
 
+    print("Done")
+
 
 if __name__ == "__main__":
-    from scripts.globals import current_date
+    from scripts.Globals import current_date
 
     day, month, year = current_date()
     web_scrapper(day, month, year)

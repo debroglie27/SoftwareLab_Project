@@ -1,4 +1,4 @@
-from scripts.globals import current_date
+from scripts.Globals import current_date
 from scripts.WebScrapper import web_scrapper
 from scripts.MergeCSV import merge_csv
 from scripts.DataPlotter import data_plotter

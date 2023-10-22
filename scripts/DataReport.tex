@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
-\usepackage[margin=0.73in]{geometry}
+\usepackage[top=1in, bottom=1.2in, left=0.73in, right=0.73in]{geometry}
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{datatool, filecontents}
@@ -18,20 +18,17 @@
     urlcolor=cyan,
 }
 
+\title{Auto-generated Report on ICC Men's Ranking}
+\author{Author: Python Program}
+\date{Dated: \var{day}-\var{month}-\var{year}}
+
+\renewcommand{\contentsname}{\LARGE{Table Of Contents}}
+
 \begin{document}
+    \maketitle
 
-    \begin{center}
+    \vspace{1cm}
 
-        \LARGE{\textbf{ICC Men's Ranking}} \\
-        \vspace{1em}
-        \Large{An Auto-generated Report on ICC Men's Ranking} \\
-        \vspace{1em}
-        \normalsize{Dated: \var{day}-\var{month}-\var{year}}
-        \vspace{1em}
-
-    \end{center}
-
-    \vspace{4em}
     \tableofcontents
 
     \newpage

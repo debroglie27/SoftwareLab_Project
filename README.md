@@ -3,6 +3,10 @@
 This is a Software Lab (CS699) Project where we generate a report on ICC Men's Ranking and that too automatic.  
 `ICC - International Cricket Council`
 
+## Group Members
+- Arijeet De (23M0742)
+- A Asish (23M0759)
+
 ## Packages Used
 
 - requests (2.31.0)
@@ -21,6 +25,10 @@ The entire project is divided into 5 steps:
 - PDF Report Generation
 
 ### Fetching Current Date
+
+The current day, month and year is retrieved: 
+- For keeping track of csv files
+- To use as date in latex
 
 ### Web Scraping
 

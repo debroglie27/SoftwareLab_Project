@@ -13,11 +13,14 @@ This is a Software Lab (CS699) Project where we generate a report on ICC Men's R
 
 ## Introduction
 
-The entire project is divided into 3 steps:
+The entire project is divided into 5 steps:
+- Fetching Current Date
 - Web Scraping
+- Merging CSV Files
 - Data Plotting
 - PDF Report Generation
 
+### Fetching Current Date
 
 ### Web Scraping
 
@@ -45,7 +48,7 @@ The Data collected is stored inside a csv folder and data from each webpage is i
 
 `Note: Day, Month and Year are also specified to represent the date of web scraping.`
 
-### About The Data
+#### About The Data
 
 Columns:
 * Pos: Rank of Player
@@ -53,6 +56,9 @@ Columns:
 * Team: Team the Player belongs to
 * Rating: Rating of Player (out of 1000)
 * Career Best Rating: Career Best Rating of Player (out of 1000)
+
+
+### Merging CSV Files
 
 ### Data Plotting
 Using the csv files bar plots are created. From each csv file 2 plots are created.

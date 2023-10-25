@@ -77,3 +77,4 @@ Using the csv files bar plots are created. From each csv file 2 plots are create
 ### PDF Report Generation
 
 ### Conclusion
+This project can be leveraged for ongoing analysis by consistently gathering data and subsequently conducting comprehensive evaluations to gain insights into players' long-term performance trends.

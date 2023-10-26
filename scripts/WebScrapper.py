@@ -4,7 +4,17 @@ from bs4 import BeautifulSoup
 from scripts.Globals import CRICKET_FORMATS, PLAYER_TYPES, save_latex_variables, check_folder
 
 
-def web_scrapper(dd, mm, yyyy):
+def web_scrapper(dd: int, mm: int, yyyy: int) -> None:
+    """
+    Scrapes cricket player ranking data from the International Cricket Council (ICC) website.
+    It retrieves data for various cricket formats and player types, processes it, and saves the
+    information in CSV files.
+
+    :param dd: value of day
+    :param mm: value of month (1 to 12)
+    :param yyyy: value of yea
+    """
+
     print("Fetching Online Data...")
 
     base_url = 'https://www.icc-cricket.com/rankings/mens/player-rankings/'

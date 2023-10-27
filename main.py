@@ -5,7 +5,7 @@ from scripts.DataPlotter import data_plotter
 from scripts.LatexCompiler import latex_compiler
 
 
-if __name__ == "__main__":
+def main_program():
     # Get Current Date
     day, month, year = current_date()
 
@@ -20,3 +20,7 @@ if __name__ == "__main__":
 
     # Compiling the Latex File
     latex_compiler()
+
+
+if __name__ == "__main__":
+    main_program()

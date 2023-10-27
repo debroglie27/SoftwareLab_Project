@@ -2,7 +2,22 @@ import os
 from scripts.Globals import check_folder
 
 
-def latex_compiler():
+def latex_compiler() -> None:
+    """
+    Compile a LaTeX file to generate a PDF report.
+
+    This function compiles a LaTeX file, 'DataReport.tex,' to generate a PDF report. It does the compilation twice to ensure
+    the Table of Contents is generated properly.
+
+    The generated PDF report is saved in the 'output' directory.
+
+    Example usage:
+    latex_compiler()
+
+    Note: The function assumes that the LaTeX source file ('DataReport.tex') is located in the 'scripts' directory,
+    and it will change the working directory to 'output' where the PDF output is saved.
+    """
+
     print("Compiling Latex File...")
 
     check_folder('output')

@@ -6,13 +6,18 @@ from scripts.Globals import CRICKET_FORMATS, PLAYER_TYPES, save_latex_variables,
 
 def web_scrapper(dd: int, mm: int, yyyy: int) -> None:
     """
-    Scrapes cricket player ranking data from the International Cricket Council (ICC) website.
-    It retrieves data for various cricket formats and player types, processes it, and saves the
-    information in CSV files.
+    Scrape cricket player rankings data from the ICC website and save it as CSV files.
 
-    :param dd: value of day
-    :param mm: value of month (1 to 12)
-    :param yyyy: value of yea
+    Parameters:
+    - dd (int): Day of the date.
+    - mm (int): Month of the date.
+    - yyyy (int): Year of the date.
+
+    This function scrapes data for various cricket formats and player types from the ICC website.
+    It saves the data as CSV files with a filename based on the date and player type.
+
+    Example usage:
+    web_scrapper(1, 1, 2023)  # Scrapes data for January 1, 2023.
     """
 
     print("Fetching Online Data...")

@@ -50,9 +50,12 @@ def merge_csv(dd: int, mm: int, yyyy: int) -> None:
 
     print("Merging CSV Files...")
 
+    # Checking whether 'csv' folder exists, if not then create 'csv' folder and returns folder path
     folder_path = check_folder('csv')
 
+    # List of filenames inside the 'csv' folder
     all_filenames = os.listdir(folder_path)
+    # Filtering filenames based on <dd, mm, yyyy>
     all_filenames = list(filter(lambda filename: filter_files(filename, dd, mm, yyyy), all_filenames))
 
     for cricket_format in CRICKET_FORMATS:

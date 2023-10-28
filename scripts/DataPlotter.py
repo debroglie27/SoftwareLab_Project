@@ -26,6 +26,7 @@ def data_plotter(dd: int, mm: int, yyyy: int) -> None:
 
     print("Generating Plots...")
 
+    # Checking whether 'plots' folder exists, if not then create 'plots' folder
     check_folder('plots')
 
     for cricket_format in CRICKET_FORMATS:
@@ -33,6 +34,7 @@ def data_plotter(dd: int, mm: int, yyyy: int) -> None:
             # Reading the csv file
             df = pd.read_csv(f'./csv/{cricket_format}_{player_type}_{dd}-{mm}-{yyyy}.csv')
 
+            # Declaring 2 figures
             plt.figure(0, figsize=(10, 5))
             plt.figure(1, figsize=(10, 5))
 
@@ -56,6 +58,7 @@ def data_plotter(dd: int, mm: int, yyyy: int) -> None:
             plt.savefig(f'./plots/{cricket_format}_{player_type}-2.png')
             plt.close(1)
 
+        # Declaring 2 figures
         plt.figure(0, figsize=(10, 5))
         plt.figure(1, figsize=(10, 5))
 

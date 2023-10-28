@@ -20,6 +20,7 @@ def latex_compiler() -> None:
 
     print("Compiling Latex File...")
 
+    # Checking whether 'output' folder exists, if not then create 'output' folder
     check_folder('output')
 
     # Changing directory to where output files of latex compilation will be generated

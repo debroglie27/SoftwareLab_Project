@@ -24,6 +24,7 @@ def web_scrapper(dd: int, mm: int, yyyy: int) -> None:
 
     base_url = 'https://www.icc-cricket.com/rankings/mens/player-rankings/'
 
+    # Checking whether 'csv' folder exists, if not then create 'csv' folder
     check_folder('csv')
 
     for cricket_format in CRICKET_FORMATS:

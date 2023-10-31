@@ -1,6 +1,6 @@
 # Autogenerate Report On ICC Men's Ranking
 
-This is a Software Lab (CS699) Project where we generate a report on ICC Men's Ranking and that too automatic.  
+This is a Software Lab (CS699) Project where we generate a report on ICC Men's Ranking using techniques and tools like web scraping, plotting and latex.  
 `ICC - International Cricket Council`
 
 ## Group Members

@@ -1,39 +1,3 @@
 day,31
 month,10
 year,2023
-t20i-batting-name,Suryakumar Yadav
-t20i-batting-team,IND
-t20i-batting-rating,863
-t20i-batting-best-rating,910
-t20i-bowling-name,Rashid Khan
-t20i-bowling-team,AFG
-t20i-bowling-rating,692
-t20i-bowling-best-rating,816
-t20i-all-rounder-name,Shakib Al Hasan
-t20i-all-rounder-team,BAN
-t20i-all-rounder-rating,272
-t20i-all-rounder-best-rating,408
-odi-batting-name,Babar Azam
-odi-batting-team,PAK
-odi-batting-rating,829
-odi-batting-best-rating,898
-odi-bowling-name,Josh Hazlewood
-odi-bowling-team,AUS
-odi-bowling-rating,670
-odi-bowling-best-rating,733
-odi-all-rounder-name,Shakib Al Hasan
-odi-all-rounder-team,BAN
-odi-all-rounder-rating,324
-odi-all-rounder-best-rating,453
-test-batting-name,Kane Williamson
-test-batting-team,NZ
-test-batting-rating,883
-test-batting-best-rating,919
-test-bowling-name,Ravichandran Ashwin
-test-bowling-team,IND
-test-bowling-rating,879
-test-bowling-best-rating,904
-test-all-rounder-name,Ravindra Jadeja
-test-all-rounder-team,IND
-test-all-rounder-rating,455
-test-all-rounder-best-rating,460

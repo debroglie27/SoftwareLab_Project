@@ -4,6 +4,7 @@ from datetime import date
 
 CRICKET_FORMATS = ['t20i', 'odi', 'test']
 PLAYER_TYPES = ['batting', 'bowling', 'all-rounder']
+BAR_COLORS = {'t20i': 'green', 'odi': 'orange', 'test': 'purple', 'overall': 'cyan'}
 
 
 def save_latex_variables(tex_dict: dict, mode: str) -> None:

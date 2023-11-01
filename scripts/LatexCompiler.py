@@ -18,7 +18,7 @@ def latex_compiler() -> None:
     and it will change the working directory to 'output' where the PDF output is saved.
     """
 
-    print("Compiling Latex File...")
+    print("-"*40 + "\nCompiling Latex File...")
 
     # Checking whether 'output' folder exists, if not then create 'output' folder
     check_folder('output')
@@ -30,7 +30,7 @@ def latex_compiler() -> None:
     os.system("pdflatex ../scripts/DataReport.tex > NUL 2>&1")
     os.system("pdflatex ../scripts/DataReport.tex > NUL 2>&1")
 
-    print("Done")
+    print("Done\n" + "-"*40)
 
 
 if __name__ == "__main__":

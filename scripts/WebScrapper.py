@@ -20,7 +20,7 @@ def web_scrapper(dd: int, mm: int, yyyy: int) -> None:
     web_scrapper(1, 1, 2023)  # Scrapes data for January 1, 2023.
     """
 
-    print("Fetching Online Data...")
+    print("-"*40 + "\nFetching Online Data...")
 
     base_url = 'https://www.icc-cricket.com/rankings/mens/player-rankings/'
 

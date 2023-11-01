@@ -69,7 +69,7 @@ def current_date() -> tuple[int, int, int]:
     day, month, year = current_date()  # Get the current date and save it for LaTeX use.
     """
 
-    print("Fetching Current Date...")
+    print("-"*40 + "\nFetching Current Date...")
 
     day = date.today().day
     month = date.today().month

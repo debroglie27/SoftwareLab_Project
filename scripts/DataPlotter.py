@@ -24,7 +24,7 @@ def data_plotter(dd: int, mm: int, yyyy: int) -> None:
     data_plotter(1, 1, 2023)  # Generates plots for January 1, 2023, cricket data.
     """
 
-    print("Generating Plots...")
+    print("-"*40 + "\nGenerating Plots...")
 
     # Checking whether 'plots' folder exists, if not then create 'plots' folder
     check_folder('plots')

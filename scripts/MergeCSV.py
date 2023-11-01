@@ -48,7 +48,7 @@ def merge_csv(dd: int, mm: int, yyyy: int) -> None:
     merge_csv(1, 1, 2023)  # Merges CSV files for January 1, 2023, and creates 'overall' CSV files.
     """
 
-    print("Merging CSV Files...")
+    print("-"*40 + "\nMerging CSV Files...")
 
     # Checking whether 'csv' folder exists, if not then create 'csv' folder and returns folder path
     folder_path = check_folder('csv')

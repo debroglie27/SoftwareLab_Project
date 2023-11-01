@@ -6,6 +6,8 @@ from scripts.LatexCompiler import latex_compiler
 
 
 def main_program():
+    print("#"*40 + "\nLaunching...")
+
     # Get Current Date
     day, month, year = current_date()
 
@@ -20,6 +22,8 @@ def main_program():
 
     # Compiling the Latex File
     latex_compiler()
+
+    print("Completed\n" + "#"*40)
 
 
 if __name__ == "__main__":

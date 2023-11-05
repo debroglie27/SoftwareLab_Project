@@ -45,7 +45,7 @@ def data_plotter(dd: int, mm: int, yyyy: int) -> None:
             plt.xlabel('Cricket Teams')
             plt.ylabel('No. of Players')
             plt.bar(counts.index, counts.values, color=BAR_COLORS[cricket_format])
-            plt.savefig(f'./plots/{cricket_format}_{player_type}-1.png')
+            plt.savefig(f'./plots/{cricket_format}_{player_type}_total_players.png')
             plt.close(0)
 
             # Plot 2 - Average Rating of Players for each Cricket Team
@@ -55,7 +55,7 @@ def data_plotter(dd: int, mm: int, yyyy: int) -> None:
             plt.xlabel('Cricket Teams')
             plt.ylabel('Average Rating')
             plt.bar(mean_score.index, mean_score.values, color=BAR_COLORS[cricket_format])
-            plt.savefig(f'./plots/{cricket_format}_{player_type}-2.png')
+            plt.savefig(f'./plots/{cricket_format}_{player_type}_avg_rating.png')
             plt.close(1)
 
         # Declaring 2 figures
@@ -72,7 +72,7 @@ def data_plotter(dd: int, mm: int, yyyy: int) -> None:
         plt.xlabel('Cricket Teams')
         plt.ylabel('No. of Players')
         plt.bar(counts.index, counts.values, color=BAR_COLORS['overall'])
-        plt.savefig(f'./plots/overall_{cricket_format}-1.png')
+        plt.savefig(f'./plots/overall_{cricket_format}_total_players.png')
         plt.close(0)
 
         # Plot 2 - Average Rating of Players for each Cricket Team (Overall)
@@ -82,7 +82,7 @@ def data_plotter(dd: int, mm: int, yyyy: int) -> None:
         plt.xlabel('Cricket Teams')
         plt.ylabel('Average Rating')
         plt.bar(mean_score.index, mean_score.values, color=BAR_COLORS['overall'])
-        plt.savefig(f'./plots/overall_{cricket_format}-2.png')
+        plt.savefig(f'./plots/overall_{cricket_format}_avg_rating.png')
         plt.close(1)
 
     print("Done")

@@ -4,8 +4,10 @@ This is a Software Lab (CS699) Project where we generate a report on ICC Men's R
 `ICC - International Cricket Council`
 
 ## Group Members
-- Arijeet De (23M0742)
-- A Asish (23M0759)
+| Name       | Roll No. |
+|------------|----------|
+| Arijeet De | 23M0742  |
+| A Asish    | 23M0759  |
 
 ## Packages Used
 
@@ -67,12 +69,27 @@ Columns:
 
 
 ### Merging CSV Files
+For each `<cricket-format> (t20i, odi, test)` we have 3 csv files:
+- <cricket-format>_batting_DD-MM-YYYY.csv
+- <cricket-format>_bowling_DD-MM-YYYY.csv
+- <cricket-format>_all-rounder_DD-MM-YYYY.csv
+
+For each `<cricket-format>` we are merging these csv files into one. So we will have 3 merged csv files:
+- overall_odi_DD-MM-YYYY.csv
+- overall_t20i_DD-MM-YYYY.csv
+- overall_test_DD-MM-YYYY.csv
+
+So in total we now have `12 csv files`.
+
 
 ### Data Plotting
 Using the csv files bar plots are created. From each csv file 2 plots are created.
 
-* First Plot: Number of Players for each Cricket Team
-* Second Plot: Average Rating of Players for each Cricket Team
+* **First Plot:** Number of Players for each Cricket Team
+* **Second Plot:** Average Rating of Players for each Cricket Team
+
+So in total we now have `24 bar plots`.
+
 
 ### PDF Report Generation
 

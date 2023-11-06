@@ -92,6 +92,8 @@ So in total we now have `24 bar plots`.
 
 
 ### PDF Report Generation
+Using `pdflatex` command the DataReport.tex file was compiled and converted to a pdf file.
+The pdf file gets generated in the output folder.
 
 ### Conclusion
 This project can be leveraged for ongoing analysis by consistently gathering data and subsequently conducting comprehensive evaluations to gain insights into players' long-term performance trends.

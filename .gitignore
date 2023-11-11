@@ -144,6 +144,11 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+## latex/pdflatex auxiliary files:
+*.aux
+*.out
+*.toc
+
 # PyCharm
 #  JetBrains specific template is maintainted in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore

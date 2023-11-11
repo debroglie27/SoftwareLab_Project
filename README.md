@@ -1,15 +1,18 @@
-# Autogenerate Report On ICC Men's Ranking
+# ICC Men's Ranking Report Generator
 
-This is a Software Lab (CS699) Project where we generate a report on ICC Men's Ranking using techniques and tools like web scraping, plotting and latex.  
-`ICC - International Cricket Council`
+Welcome to the ICC Men's Ranking Report Generator! This Python project automates the process of  
+collecting and analyzing cricket player rankings from the International Cricket Council (ICC) website,   
+creating a comprehensive report in LaTeX format.
+
+`Note: ICC -> Internation Cricket Council`
 
 ## Group Members
-| Name       | Roll No. |
-|------------|----------|
-| Arijeet De | 23M0742  |
-| A Asish    | 23M0759  |
+| SL No. | Name       | Roll No. |
+|--------|------------|----------|
+| 1      | Arijeet De | 23M0742  |
+| 2      | A Asish    | 23M0759  |
 
-## Packages Used
+## Dependencies
 
 - requests (2.31.0)
 - beautifulsoup4 (4.12.2)
@@ -17,9 +20,12 @@ This is a Software Lab (CS699) Project where we generate a report on ICC Men's R
 - matplotlib (3.8.0)
 - pdflatex (0.1.3)
 
-## Introduction
+## Overview
+Cricket enthusiasts often seek up-to-date information on player rankings to understand the current   
+standings in the cricketing world. This project aims to simplify this process by automating the retrieval   
+of player rankings from the ICC website and generating a detailed report with insightful visualizations.
 
-The entire project is divided into 5 steps:
+Steps involved in this project:
 - Fetching Current Date
 - Web Scraping
 - Merging CSV Files
@@ -33,8 +39,8 @@ The current day, month and year is retrieved:
 - To use as date in latex
 
 ### Web Scraping
-
-The data is collected from ICC's official website (9 Webpages):
+The project leverages web scraping techniques to extract the latest ICC Men's rankings directly   
+from the official ICC website. The data is collected from total `9 webpages` as shown below:
 - [T20i Batting Ranking Data](https://www.icc-cricket.com/rankings/mens/player-rankings/t20i/batting)
 - [T20i Bowling Ranking Data](https://www.icc-cricket.com/rankings/mens/player-rankings/t20i/bowling)
 - [T20i All-Rounder Ranking Data](https://www.icc-cricket.com/rankings/mens/player-rankings/t20i/all-rounder)
@@ -92,8 +98,9 @@ So in total we now have `24 bar plots`.
 
 
 ### PDF Report Generation
-Using `pdflatex` command the DataReport.tex file was compiled and converted to a pdf file.
+Using `pdflatex` command the DataReport.tex file was compiled and converted to a pdf file.  
 The pdf file gets generated in the output folder.
 
 ### Conclusion
-This project can be leveraged for ongoing analysis by consistently gathering data and subsequently conducting comprehensive evaluations to gain insights into players' long-term performance trends.
+This project can be leveraged for ongoing analysis by consistently gathering data and subsequently   
+conducting comprehensive evaluations to gain insights into players' long-term performance trends.

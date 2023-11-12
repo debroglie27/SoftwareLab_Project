@@ -23,7 +23,7 @@ def main_program():
     # Compiling the Latex File
     latex_compiler()
 
-    print("Completed\n" + "#"*40)
+    print("Successfully Completed\n" + "#"*40)
 
 
 if __name__ == "__main__":

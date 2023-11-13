@@ -91,8 +91,8 @@ So in total we now have `12 csv files`.
 ### Data Plotting
 Using the csv files bar plots are created. From each csv file 2 plots are created.
 
-* **First Plot:** Number of Players for each Cricket Team
-* **Second Plot:** Average Rating of Players for each Cricket Team
+* **Total Players Plot:** Number of Players for each Cricket Team
+* **Average Rating Plot:** Average Rating of Players for each Cricket Team
 
 So in total we now have `24 bar plots`.
 

@@ -99,7 +99,8 @@ So in total we now have `24 bar plots`.
 
 ### PDF Report Generation
 Using `pdflatex` command the DataReport.tex file was compiled and converted to a pdf file.  
-The pdf file gets generated in the output folder.
+The latex file is compiled twice so that the table of contents gets displayed properly.   
+The pdf file gets generated in the output folder along with some auxiliary files.
 
 ### Conclusion
 This project can be leveraged for ongoing analysis by consistently gathering data and subsequently   

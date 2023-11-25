@@ -20,9 +20,9 @@ def filter_files(filename, dd, mm, yyyy):
     It extracts the date parts from the filename, compares them to the specified date, and returns True if there is a match.
 
     Example usage:
-    filter_files('odi_all-rounder_01-01-2023_data.csv', 1, 1, 2023)  # Returns True for matching date.
-    filter_files('overall_t20i_15-02-2023_data.csv', 1, 1, 2023)  # Returns False for non-matching date.
-    filter_files('test_bowling_02-07-2022_data.csv', 1, 1, 2023)  # Returns False for a filename without a date.
+    filter_files('odi_all-rounder_1-1-2023_data.csv', 1, 1, 2023)  # Returns True for matching date.
+    filter_files('overall_t20i_15-2-2023_data.csv', 1, 1, 2023)  # Returns False for non-matching date.
+    filter_files('test_bowling_2-7-2022_data.csv', 1, 1, 2023)  # Returns False for a filename without a date.
     """
 
     # Extract the date from the filename

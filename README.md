@@ -4,7 +4,7 @@ Welcome to the ICC Men's Ranking Report Generator! This Python project automates
 collecting and analyzing cricket player rankings from the International Cricket Council (ICC) website,   
 creating a comprehensive report in LaTeX format.
 
-`Note: ICC -> Internation Cricket Council`
+`Note: ICC -> International Cricket Council`
 
 ## Group Members
 | SL No. | Name       | Roll No. |

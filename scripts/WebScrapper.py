@@ -1,4 +1,5 @@
 import requests
+from requests.exceptions import ConnectionError, HTTPError, RequestException
 import pandas as pd
 from bs4 import BeautifulSoup
 from scripts.Globals import CRICKET_FORMATS, PLAYER_TYPES, save_latex_variables, check_folder
@@ -31,8 +32,22 @@ def web_scrapper(dd: int, mm: int, yyyy: int) -> None:
         for player_type in PLAYER_TYPES:
             # Creating the request url
             url = base_url + cricket_format + '/' + player_type
-            # Getting the requested url
-            page = requests.get(url)
+
+            try:
+                # Getting the requested url
+                page = requests.get(url)
+                # Raises HTTPError for bad responses
+                page.raise_for_status()
+            except ConnectionError as conn_error:
+                print(f"Error connecting to the server: {conn_error}")
+                return
+            except HTTPError as http_error:
+                print(f"HTTP Error: {http_error}")
+                return
+            except RequestException as req_error:
+                print(f"Request Error: {req_error}")
+                return
+
             # Getting the html of the page
             soup = BeautifulSoup(page.text, 'html.parser')
 

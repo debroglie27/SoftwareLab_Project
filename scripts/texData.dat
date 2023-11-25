@@ -1,4 +1,4 @@
-day,11
+day,25
 month,11
 year,2023
 t20i-batting-name,Suryakumar Yadav
@@ -15,15 +15,15 @@ t20i-all-rounder-rating,272
 t20i-all-rounder-best-rating,408
 odi-batting-name,Shubman Gill
 odi-batting-team,IND
-odi-batting-rating,830
+odi-batting-rating,826
 odi-batting-best-rating,847
-odi-bowling-name,Mohammed Siraj
-odi-bowling-team,IND
-odi-bowling-rating,709
-odi-bowling-best-rating,736
+odi-bowling-name,Keshav Maharaj
+odi-bowling-team,SA
+odi-bowling-rating,741
+odi-bowling-best-rating,741
 odi-all-rounder-name,Shakib Al Hasan
 odi-all-rounder-team,BAN
-odi-all-rounder-rating,327
+odi-all-rounder-rating,330
 odi-all-rounder-best-rating,453
 test-batting-name,Kane Williamson
 test-batting-team,NZ
